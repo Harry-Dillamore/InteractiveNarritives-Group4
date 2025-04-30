@@ -1,6 +1,5 @@
 # InteractiveNarritive-Group4
 ## Research
-- - -
 ### AI / Zombies
 #### Aims
 We want the zombies in the game to have different types which will determine their attributes and behaviors. The types we have come up with as a starting point are:
@@ -8,7 +7,7 @@ We want the zombies in the game to have different types which will determine the
 - Scouts: Faster zombies with ability to track and follow the player
 - Leaders: Similar to regular zombies but more intelligent, with the ability to alert nearby zombies of the player's location.
 
-For these types I will need to research how to adjust the senses and behavior of AI characters and find out how to allow for some level of communication between them.  
+For these types I will need to research how to adjust the senses and behaviour of AI characters and find out how to allow for some level of communication between them.  
 
 #### Examples
 ###### The Last of Us
@@ -34,7 +33,7 @@ Another key feature detailed in this documentation is AI teams, which is a funct
 
 <img src="https://dev.epicgames.com/community/api/documentation/image/ce61859f-a1ad-4eed-bb33-a2c31f5f8b2f?resizing_type=fit"/>
 
-###### Zombie AI Tutorial (Survival Game - Behavior Trees & AI Senses (Section 3), s.d.)
+###### Zombie AI Tutorial (Survival Game - Behaviour Trees & AI Senses (Section 3), s.d.)
 This article and videos outline how to set up an AI which detects the player using sight and hearing using C++ and a behaviour tree. It covers important details such as using a custom AnimNotify to trigger the player's footsteps at the right point in their animation. It also shows an example of the AI's behaviour tree which controls what actions the AI performs, such as moving towards the player if they are sensed or patrolling if they are not. Overall, this tutorial gives a very good starting point for the AI in our game that we will be able to build upon to add some complexity and variation in the behaviour of.
 - - -
 ### Combat
@@ -42,6 +41,14 @@ This article and videos outline how to set up an AI which detects the player usi
 While combat is not the focus of the game, and we do not want the player to be able to kill zombies in order to progress, we do want the player to have some options for defending themselves. The methods we plan to experiment with are:
 - Slingshot / throwing stones – giving the player a slingshot or something similar that would not do much or any damage to enemies, but would be capable of causing distractions that they player can take advantage of to get past zombies.
 - Pushing enemies – we want to give the player a melee attack which allows them to stagger and push back zombies, but not kill them. The purpose of this would be to give the player some agency to get past zombies when they are blocking the path, while keeping them as a formidable threat and meaning that a group of zombies is still very difficult to get through.
+
+#### Examples
+###### Spider Man
+In the spider Man games, there are stealth missions in which the gameplay is based around avoiding detection and distracting enemies in order to get past them. In these levels, the player has various options such as interacting with environmental objects and performing takedowns on isolated enemies if certain conditions are met.
+
+![alt text](https://i.redd.it/eyln83zyg1nb1.jpg)
+
+One element of these levels in the *Spider Man* games that we want to avoid is having the level fail when the player is spotted. This is because we want it to be the player's choice whether they commit fully to stealth or allow themselves to be spotted and attempt to make it past the zombies before they can be caught. We will also likely reduce the player's ability to completely take down enemies, but introduce an attack to briefly push them back or out of the way allowing the player to make a path through enemies to some degree. I think that this will help to mitigate some of the frustration that players find when playing stealth games as it gives them the choice of how to play.
 
 #### Tutorials and Resources
 ###### Video on Distracting Enemies With Noise (How To Distract An Enemy With Noise | AI Hearing – Unreal Engine 4 Tutorial, 2021)
@@ -58,6 +65,6 @@ In this video and the following videos in the tutorial series detail creating a 
 
 ### Cutscenes and Quick Time Events
 #### Aims
-In the game, we want to blend short cutscenes with gameplay to create cinematic moments without making the player feel like they don't have control of the characters' actions for long periods of time. This will allow for dynamic sequences and moments where the narrative can be developed, while keeping the gameplay as the main focus.
+In the game, we want to blend short cutscenes with gameplay to create cinematic moments without making the player feel like they don't have control of the characters' actions for long periods of time. This will allow for dynamic sequences and moments where the narrative can be developed, while keeping the gameplay as the main focus. 
 
 ## Bibliography
