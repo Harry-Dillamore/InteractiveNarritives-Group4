@@ -25,13 +25,14 @@ I believe that this exemplifies an ideal way of implementing different types of 
 ###### Documentation on AI perception in UE5 (AI Perception in Unreal Engine | Unreal Engine 5.5 Documentation | Epic Developer Community, s.d.)
 This documentation goes over the different types of AI perception such as sight, damage and hearing. This can be applied to our zombie AI by allowing us to give the different types of zombies varied abilities in each of these areas of perception - e.g. one type could have very good hearing but bad sight, while another type could have the opposite.
 
-<img height=400 src="https://dev.epicgames.com/community/api/documentation/image/7969bfb8-6c4b-4cdc-8477-03e432496b29?resizing_type=fit&amp;width=1400&amp;height=829"/>
+<img height=400 src="https://img.edc-cdn.net/imgproxy/EIKVPAwxHc2oML8yucZgGV8o-3dNe1EHjTlgtFFkwJg/filename:perception-sight.png/resizing_type:fit/width:1400/height:829/enlarge:true/aHR0cHM6Ly9kMWl2N2RiNDR5aGd4bi5jbG91ZGZyb250Lm5ldC9kb2N1bWVudGF0aW9uL2ltYWdlcy83OTY5YmZiOC02YzRiLTRjZGMtODQ3Ny0wM2U0MzI0OTZiMjkvcGVyY2VwdGlvbi1zaWdodC5wbmc"/>
 
-<img height="400" src="https://dev.epicgames.com/community/api/documentation/image/cdcac1bb-a6eb-4c86-8f08-c2536679c34c?resizing_type=fit"/>
+
+<img height=400 src="https://img.edc-cdn.net/imgproxy/7kcJpwjPjrjU2YcT1vLHUpSf4x6xp5hx2UupD3A1TU4/filename:perception-hearing.png/resizing_type:fit/width:0/height:0/aHR0cHM6Ly9kMWl2N2RiNDR5aGd4bi5jbG91ZGZyb250Lm5ldC9kb2N1bWVudGF0aW9uL2ltYWdlcy9jZGNhYzFiYi1hNmViLTRjODYtOGYwOC1jMjUzNjY3OWMzNGMvcGVyY2VwdGlvbi1oZWFyaW5nLnBuZw"/>
 
 Another key feature detailed in this documentation is AI teams, which is a function allowing AI to create a stimulus to broadcast to nearby AI agents on the same team. This can allow for coordination between enemies - which, in our game, would give the player reason to avoid larger groups of zombies as they will be able to spread information of the player's location.
 
-<img src="https://dev.epicgames.com/community/api/documentation/image/ce61859f-a1ad-4eed-bb33-a2c31f5f8b2f?resizing_type=fit"/>
+<img src="https://img.edc-cdn.net/imgproxy/jLY09Yw8iQ1JE53QUHgUMJnyA12vKL1Ef7pHsGzqAUs/filename:perception-team.png/resizing_type:fit/width:0/height:0/aHR0cHM6Ly9kMWl2N2RiNDR5aGd4bi5jbG91ZGZyb250Lm5ldC9kb2N1bWVudGF0aW9uL2ltYWdlcy9jZTYxODU5Zi1hMWFkLTRlZWQtYmIzMy1hMmMzMWY1ZjhiMmYvcGVyY2VwdGlvbi10ZWFtLnBuZw"/>
 
 ###### Zombie AI Tutorial (Survival Game - Behaviour Trees & AI Senses (Section 3), s.d.)
 This article and videos outline how to set up an AI which detects the player using sight and hearing using C++ and a behaviour tree. It covers important details such as using a custom AnimNotify to trigger the player's footsteps at the right point in their animation. It also shows an example of the AI's behaviour tree which controls what actions the AI performs, such as moving towards the player if they are sensed or patrolling if they are not. Overall, this tutorial gives a very good starting point for the AI in our game that we will be able to build upon to add some complexity and variation in the behaviour of.
@@ -43,10 +44,10 @@ While combat is not the focus of the game, and we do not want the player to be a
 - Pushing enemies – we want to give the player a melee attack which allows them to stagger and push back zombies, but not kill them. The purpose of this would be to give the player some agency to get past zombies when they are blocking the path, while keeping them as a formidable threat and meaning that a group of zombies is still very difficult to get through.
 
 #### Examples
-###### Spider Man
+###### Spider Man (Marvel’s Spider-Man, 2018)
 In the spider Man games, there are stealth missions in which the gameplay is based around avoiding detection and distracting enemies in order to get past them. In these levels, the player has various options such as interacting with environmental objects and performing takedowns on isolated enemies if certain conditions are met.
 
-![alt text](https://i.redd.it/eyln83zyg1nb1.jpg)
+<img alt="alt text" src="https://i.redd.it/eyln83zyg1nb1.jpg"/>
 
 One element of these levels in the *Spider Man* games that we want to avoid is having the level fail when the player is spotted. This is because we want it to be the player's choice whether they commit fully to stealth or allow themselves to be spotted and attempt to make it past the zombies before they can be caught. We will also likely reduce the player's ability to completely take down enemies, but introduce an attack to briefly push them back or out of the way allowing the player to make a path through enemies to some degree. I think that this will help to mitigate some of the frustration that players find when playing stealth games as it gives them the choice of how to play.
 
@@ -66,5 +67,11 @@ In this video and the following videos in the tutorial series detail creating a 
 ### Cutscenes and Quick Time Events
 #### Aims
 In the game, we want to blend short cutscenes with gameplay to create cinematic moments without making the player feel like they don't have control of the characters' actions for long periods of time. This will allow for dynamic sequences and moments where the narrative can be developed, while keeping the gameplay as the main focus. 
+
+## Implementation
+### AI
+I began implementing 
+
+
 
 ## Bibliography
