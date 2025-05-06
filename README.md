@@ -69,8 +69,14 @@ In this video and the following videos in the tutorial series detail creating a 
 In the game, we want to blend short cutscenes with gameplay to create cinematic moments without making the player feel like they don't have control of the characters' actions for long periods of time. This will allow for dynamic sequences and moments where the narrative can be developed, while keeping the gameplay as the main focus. 
 
 ## Implementation
-### AI
-I began implementing 
+### AI (unfinished notes)
+added ability to attack ai characters, needed to edit logic so that they would stop following the player while their hurt animation played.
+
+<img alt="img.png" src="img.png"/>
+
+<iframe src="https://blueprintue.com/render/i5txq92s/" scrolling="no" allowfullscreen></iframe>
+
+mistake in logic caused the ai to lose track of the player if hit, meaning it would go back to roaming randomly.
 
 
 
