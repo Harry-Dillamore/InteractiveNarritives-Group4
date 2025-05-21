@@ -86,7 +86,15 @@ The autofocusing depth of field system, functions correctly when moving to focus
 
 After testing the issue in different scenarios, I found that the problem was generally caused when there was a big difference in the original to the target focus distance. This showed that the issue was not that the transition was not happening, but that it was happening too quickly. Therefore, in order to fix the issue, I was able to limit the maximum focus distance so that it was never transitioning too far. This made the effect look much smoother.
 
+### Light Puzzle
+when the player interacts with a light, check the light number vs the number the player should be on, if they are the same then set the light on and increment the player's light number. If they are different then turn the light and all previous lights off.
 
+floodlights
+    int lightNum
+    float intencity
+
+player
+    int lightNum
 
 
 ## Bibliography
