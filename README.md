@@ -81,7 +81,8 @@ To begin with I made a simple AI which followed a random roam sequence then chas
 
 The AI behaviour tree at this stage consisted of telling the AI to roam to random nearby locations if there was no target player and to chase the target it one was set.
 
-<img alt="img.png" src="img.png"/>
+<img alt="img.png" src="image-1.png"/>  
+
 
 #### Combat
 As mentioned in my research, I want there to be level of combat that allows the player to stagger the zombies in order to get past them. Below is the blueprint which added ability to attack ai characters
@@ -90,14 +91,15 @@ needed to edit logic so that they would stop following the player while their hu
 
 <iframe src="https://blueprintue.com/render/ps7foz-s/" scrolling="no" allowfullscreen height="500" width="100%"></iframe>
 
+<img alt="Final Behaviour Tree" src="image-2.png"/>
 
-<img alt="Final Behaviour Tree" src="img_1.png"/>
-
-
-
-<iframe src="https://blueprintue.com/render/i5txq92s/" scrolling="no" allowfullscreen></iframe>
+<iframe src="https://blueprintue.com/render/i5txq92s/" scrolling="no" allowfullscreen height="500" width="100%"></iframe>
 
 mistake in logic caused the ai to lose track of the player if hit, meaning it would go back to roaming randomly.
+
+<img alt="alt text" src="ScreenRecording2025-05-23101152-ezgif.com-video-to-gif-converter.gif"/>
+
+<img alt="alt text" src="ScreenRecording2025-05-23100751-ezgif.com-video-to-gif-converter.gif"/>
 
 #### Alerting others
 When a zombie spots the player, I want them to alert all the surrounding zombies
@@ -108,20 +110,23 @@ The autofocusing depth of field system functions correctly when moving to focus 
 
 After testing the issue in different scenarios, I found that the problem was generally caused when there was a big difference in the original to the target focus distance. This showed that the issue was not that the transition was not happening, but that it was happening too quickly. Therefore, in order to fix the issue, I was able to limit the maximum focus distance so that it was never transitioning too far. This made the effect look much smoother.
 
+<img alt="trace fail" src="ScreenRecording2025-05-02124714-ezgif.com-video-to-gif-converter.gif">
+
+<img alt="trace partial success" src="ScreenRecording2025-05-02124923-ezgif.com-video-to-gif-converter.gif">
+
+<img alt="trace partial success" src="ScreenRecording2025-05-02125553-ezgif.com-video-to-gif-converter.gif">
+
 ### Interactions
 
+I created a mechanic which allows items to be interacted with, the purpose of this is to allow players to investigate certain items which will contain information about the game world which is not important to the gameplay, but adds environmental storytelling for players who are interested in learning the backstory and additional information about the game. The effect uses the line trace created by the depth of field system to check if the item that the player is looking at is able to be interacted with, then applies an outline material to the object if it is. To create the outline material, I followed the following tutorial:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rGqlReFObYQ?si=FgYwc6mj9f51My-i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Then when the player presses the interact key, the item is lifted to be in front of the player and rotated to face them using position and rotation lerps. The player is then able to rotate the item in the air using the mouse, meaning they are able to view it from whatever angle they want to. while the item is being interacted with, the player movement and rotation is locked to avoid any issues, then when the player presses the interact key again the item is returned to its original position and rotation. 
+
+<img alt="trace partial success" src="ScreenRecording2025-05-23084631-ezgif.com-video-to-gif-converter.gif">
 
 
-### Light Puzzle
-when the player interacts with a light, check the light number vs the number the player should be on, if they are the same then set the light on and increment the player's light number. If they are different then turn the light and all previous lights off.
-
-floodlights
-    int lightNum
-    float intencity
-
-player
-    int lightNum
-- - -
 ### Critical Reflection
 
 #### Teamwork
@@ -129,4 +134,6 @@ Our team started off very well, with a wide variety of ideas for the game, follo
 For example, item interactions were planned to be a method for environmental storytelling where the player could inspect items which contained hints to the narrative of the game and deeper story elements. And while the mechanic was fully functioning, communication between the group had not been good enough so we did not have any item models which would serve this purpose.
 
 To avoid similar issues in future group projects, I will take on more responsibility for keeping everyone updated on each other's progress and when they are planning to complete work, as well as when they will be unavailable. This would allow for more collaboration throughout the project, which would help to improve the quality of work produced. 
+
+![alt text](image.png)
 ## Bibliography
