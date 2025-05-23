@@ -68,11 +68,32 @@ In this video and the following videos in the tutorial series detail creating a 
 #### Aims
 In the game, we want to blend short cutscenes with gameplay to create cinematic moments without making the player feel like they don't have control of the characters' actions for long periods of time. This will allow for dynamic sequences and moments where the narrative can be developed, while keeping the gameplay as the main focus. 
 
+- - -
+
 ## Implementation
-### AI (unfinished notes)
-added ability to attack ai characters, needed to edit logic so that they would stop following the player while their hurt animation played.
+### Zombie AI
+As the zombies will be a core part of the gameplay - being the main obstacle that the player must get around in order to progress the narrative - I have decided to start implementing the zombie AI straight away. This will allow me to develop the AI behaviour and make improvements throughout the project. This is also something new to me so I want to avoid leaving it too late, and not having time to implement the AI the way we want.
+
+#### Initial AI
+To begin with I made a simple AI which followed a random roam sequence then chased the player if they could see them. To implement the sight perception I followed this tutorial:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bx7taRBjJgM?si=D0qFL7R-SdOLYg3y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+The AI behaviour tree at this stage consisted of telling the AI to roam to random nearby locations if there was no target player and to chase the target it one was set.
 
 <img alt="img.png" src="img.png"/>
+
+#### Combat
+As mentioned in my research, I want there to be level of combat that allows the player to stagger the zombies in order to get past them. Below is the blueprint which added ability to attack ai characters
+
+needed to edit logic so that they would stop following the player while their hurt animation played.
+
+<iframe src="https://blueprintue.com/render/ps7foz-s/" scrolling="no" allowfullscreen height="500" width="100%"></iframe>
+
+
+<img alt="Final Behaviour Tree" src="img_1.png"/>
+
+
 
 <iframe src="https://blueprintue.com/render/i5txq92s/" scrolling="no" allowfullscreen></iframe>
 
@@ -81,10 +102,15 @@ mistake in logic caused the ai to lose track of the player if hit, meaning it wo
 #### Alerting others
 When a zombie spots the player, I want them to alert all the surrounding zombies
 
-### Problem
-The autofocusing depth of field system, functions correctly when moving to focus on a closer object. However, when the focus shifts to an object which is further away, there is no gradual transition.
+### Autofocusing
+#### Problem
+The autofocusing depth of field system functions correctly when moving to focus on a closer object. However, when the focus shifts to an object which is further away, there is no gradual transition.
 
 After testing the issue in different scenarios, I found that the problem was generally caused when there was a big difference in the original to the target focus distance. This showed that the issue was not that the transition was not happening, but that it was happening too quickly. Therefore, in order to fix the issue, I was able to limit the maximum focus distance so that it was never transitioning too far. This made the effect look much smoother.
+
+### Interactions
+
+
 
 ### Light Puzzle
 when the player interacts with a light, check the light number vs the number the player should be on, if they are the same then set the light on and increment the player's light number. If they are different then turn the light and all previous lights off.
@@ -95,6 +121,12 @@ floodlights
 
 player
     int lightNum
+- - -
+### Critical Reflection
 
+#### Teamwork
+Our team started off very well, with a wide variety of ideas for the game, followed by solid research completed by each member of the group. The team leader also set us a deadline for the research to be completed, which helped encourage progress to be made immediately. Moving into the development of the game, we started to have issues where people had slightly different ideas of what exactly the game would be and what the timeline for development was. Personally, I think I could have done a better job at explaining to the team what I was working on at any given time and getting our work put together much more frequently so that it did not become a job for the final weeks - in which a number of the team were unable to be as involved as planned due to illness and various commitments. This lead to me being largely responsible for polishing the game and getting it to a point where it could be played and I did not have enough time to include all the planned features. Some of the mechanics I had put time into were also left largely unused in the final product due to me having to work on different areas of the game towards the end of the project.
+For example, item interactions were planned to be a method for environmental storytelling where the player could inspect items which contained hints to the narrative of the game and deeper story elements. And while the mechanic was fully functioning, communication between the group had not been good enough so we did not have any item models which would serve this purpose.
 
+To avoid similar issues in future group projects, I will take on more responsibility for keeping everyone updated on each other's progress and when they are planning to complete work, as well as when they will be unavailable. This would allow for more collaboration throughout the project, which would help to improve the quality of work produced. 
 ## Bibliography
